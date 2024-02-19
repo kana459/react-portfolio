@@ -1,0 +1,8 @@
+{
+  "Print to console": {
+    "scope": "javascript,typescript,scss",
+    "prefix": "ms",
+    "body": ["@include sp{}"],
+    "description": "smartphone size"
+  }
+}

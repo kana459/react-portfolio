@@ -1,0 +1,557 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap");
+.zen-maru gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-maru gothic-medium {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+a:link {
+  text-decoration: none;
+  color: #222222;
+}
+
+a:active {
+  text-decoration: none;
+  color: #222222;
+  outline: solid;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #222222;
+  outline: solid;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #222222;
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*---------------------------------
+select-backgroundcolor
+----------------------------------*/
+::-moz-selection {
+  background: #fff;
+  color: #fff;
+}
+
+::selection {
+  background: #fff;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #fff;
+}
+
+/*---------------------------------
+画像タグ設定
+----------------------------------*/
+img {
+  width: 100%;
+  height: auto;
+}
+
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+}
+
+/*---------------------------------
+html,body
+----------------------------------*/
+html {
+  font-size: 62.5%;
+  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: #fffdfa;
+  color: #191a1a;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-weight: bold;
+  line-height: inherit;
+  letter-spacing: normal;
+  font-feature-settings: "palt";
+  position: relative;
+  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  background: #fffdfa;
+  color: #191a1a;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+/*---------------------------------
+フォント設定
+----------------------------------*/
+h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 0 auto 5%;
+}
+
+h3 {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+h4 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.re-font {
+  font-size: 1.6rem;
+}
+
+.resm-font {
+  font-size: 1.4rem;
+}
+
+.sm-font {
+  font-size: 1.2rem;
+}
+
+.category {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+button {
+  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/*---------------------------------
+背景色
+----------------------------------*/
+.back_color {
+  background: #fffdfa;
+}
+
+/*---------------------------------
+コンテンツ
+----------------------------------*/
+header {
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+header .headerFv h1 {
+  display: flex;
+  justify-content: center;
+  margin: 5% 5% 10%;
+}
+header .headerFv svg {
+  width: 18vw;
+  min-width: 180px;
+}
+header .headLeftImg {
+  width: 17vw;
+}
+@media screen and (max-width: 860px) {
+  header .headLeftImg {
+    width: 100%;
+  }
+}
+header .headRightImg {
+  width: 16vw;
+}
+
+.App {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
+}
+.App a {
+  display: block;
+}
+.App nav {
+  text-align: center;
+}
+.App nav ul {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.App nav ul li {
+  transition: all 0.3s;
+  padding: 10px 0;
+}
+.App nav ul li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.App nav ul li a {
+  padding: 0 20px;
+  display: block;
+  border-right: 2px solid #191a1a;
+}
+.App nav ul li:last-of-type a, .App nav ul li:nth-of-type(3) a {
+  border-right: none;
+}
+
+main {
+  margin: 1% 15% 0;
+  position: relative;
+}
+main #worksSec .worksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10%;
+  justify-items: center;
+  margin-bottom: 0;
+}
+main #worksSec .worksList article {
+  margin-bottom: 22.2%;
+  width: 100%;
+}
+main #worksSec .worksList article .thumbnail {
+  border: 1px solid #222222;
+  border-radius: 30px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 23vw;
+}
+main #worksSec .worksList article .thumbnail img {
+  height: 100%;
+}
+main #worksSec .worksList article .categoryName {
+  margin: 0;
+  margin: 5% 0 0;
+  display: block;
+  font-size: 1.4rem;
+}
+main #worksSec .worksList article .titleName {
+  margin: 0;
+}
+main #topAbout {
+  margin-bottom: 13%;
+}
+main #topAbout .topAbout-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+main #topAbout .aboutImg {
+  border: 1px solid #222222;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5.5%;
+  width: 10.15625vw;
+  height: 10.15625vw;
+  padding: 0;
+}
+main #topAbout .abouttext {
+  width: 80%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main #skill {
+  margin-bottom: 15%;
+}
+main #skill .skillList {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+main #skill .skillList .skillData {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.5%;
+}
+main #skill .skillList .skillData dt {
+  min-width: 80px;
+  font-size: 1.8rem;
+}
+main #skill .skillList .skillData dd {
+  margin-inline-start: 0;
+}
+main .sns {
+  display: flex;
+  gap: 4%;
+  justify-content: center;
+}
+main .sns .insta,
+main .sns .line {
+  padding: 10px;
+  display: block;
+  opacity: 0.5;
+}
+main .sns .insta svg,
+main .sns .line svg {
+  width: 5vw;
+}
+main .deco {
+  display: flex;
+  justify-content: center;
+  margin: 3.9% 0 9.8%;
+}
+main .deco svg {
+  width: 8vw;
+}
+
+footer {
+  background-color: transparent;
+}
+footer #copyright {
+  padding-bottom: 1.5%;
+}
+footer #copyright .copyrightText {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contactform .formNote {
+  text-align: center;
+  margin-bottom: 10%;
+}
+.contactform form {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.contactform form .inputForm {
+  margin: 0 0 7%;
+}
+.contactform form .inputForm:last-of-type {
+  margin-bottom: 5%;
+}
+.contactform form .inputForm p {
+  margin-bottom: 2%;
+}
+.contactform form .inputForm input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  border: 1px solid;
+  /* margin-bottom: 8%; */
+  border-radius: 25px;
+  padding: 0 20px;
+  max-width: 800px;
+}
+.contactform form .inputForm .formNoteText {
+  margin: 10px 0 0;
+  text-align: justify;
+  color: red;
+}
+.contactform form .inputForm label {
+  margin-bottom: 6%;
+}
+.contactform form .inputForm label textarea {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 15px 20px;
+  max-width: 800px;
+}
+
+.contactfirm {
+  text-align: center;
+}
+.contactfirm .confirm-text {
+  margin-bottom: 4%;
+}
+.contactfirm .confirm-text:first-of-type {
+  margin-top: 8%;
+}
+.contactfirm .confirm-text p {
+  margin: 0;
+}
+.contactfirm .confirm-text .confirmName {
+  margin-bottom: 1%;
+}
+.contactfirm .confirmbtn {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+.contactfirm .confirmbtn .finSubmit {
+  opacity: 0.5;
+}
+
+.memo {
+  margin-bottom: 16%;
+}
+.memo .formClass {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 9%;
+}
+.memo .formClass form {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+}
+.memo .formClass form input {
+  border: 2px solid;
+  height: 50px;
+  width: 50vw;
+  border-radius: 25px;
+  padding: 0 20px;
+}
+.memo .memoOrder:last-of-type {
+  margin-bottom: 16%;
+}
+.memo .memoOrder .memolist {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.memo .memoOrder .memolist span {
+  display: block;
+  min-width: 250px;
+  height: 45px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.worksContent {
+  margin-bottom: 16%;
+}
+.worksContent .contTitle {
+  margin: 0 auto;
+}
+.worksContent .contCategory {
+  margin: 1% auto 8%;
+  text-align: center;
+}
+.worksContent .contMainImg {
+  width: 100%;
+  height: 35vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid;
+  border-radius: 3rem;
+}
+.worksContent .process {
+  margin: 5% auto 0;
+}
+.worksContent .contText {
+  margin: 2% auto 16%;
+}
+
+.backHome a {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  justify-content: center;
+}
+.backHome .backHomeSvg {
+  width: 5vw;
+  height: 5vw;
+  fill: #282626;
+  min-width: 40px;
+  min-height: 40px;
+}
+.backHome .backHomeTitle {
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 3px;
+  transition: all 0.2s;
+  margin: 0;
+}
+.backHome .backHomeTitle::before {
+  content: "";
+  border-bottom: 2px solid;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform ease 0.3s;
+}
+.backHome:hover .backHomeTitle::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+/*---------------------------------
+ボタン
+----------------------------------*/
+.isSubmit {
+  margin-bottom: 16%;
+  width: 30%;
+  height: 50px;
+  min-width: 150px;
+  border: 1px solid;
+  transition: all 0.3s;
+  background-color: #ffe9c8;
+}
+.isSubmit:hover {
+  opacity: 0.6;
+}
+
+.memoAddBtn {
+  width: 80px;
+  height: 50px;
+  border: 1px solid;
+  transition: all 0.3s;
+  background-color: #ffe9c8;
+}
+.memoAddBtn:hover {
+  opacity: 0.6;
+}
+
+.memoRemoveBtn {
+  width: 80px;
+  height: 40px;
+  border: 1px solid;
+  transition: all 0.3s;
+  background-color: #ffe9c8;
+}
+.memoRemoveBtn:hover {
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
