@@ -13,7 +13,6 @@ const TopAbout = () => {
           <p className='re-font'>
             2022年12月よりWebデザイナーにジョブチェンジしました。<br />
             ものづくりが好きで、シンプルなデザインを好んでつくります。
-            <br />フロントエンジニアを目指してReact/Flutterを勉強中
           </p>
         </li>
       </ul>

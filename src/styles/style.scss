@@ -273,23 +273,23 @@ header {
     }
   }
 
-  .headLeftImg {
-    width: 17vw;
-    max-width: 230px;
+  // .headLeftImg {
+  //   width: 17vw;
+  //   max-width: 230px;
 
-    @include sp {
-      display: none;
-    }
-  }
+  //   @include sp {
+  //     display: none;
+  //   }
+  // }
 
-  .headRightImg {
-    width: 16vw;
-    max-width: 210px;
+  // .headRightImg {
+  //   width: 16vw;
+  //   max-width: 210px;
 
-    @include sp {
-      display: none;
-    }
-  }
+  //   @include sp {
+  //     display: none;
+  //   }
+  // }
 }
 
 .App {

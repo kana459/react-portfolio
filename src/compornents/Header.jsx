@@ -9,9 +9,9 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="headLeftImg">
+        {/* <div className="headLeftImg">
           <img src={image1} alt="茶芝犬" />
-        </div>
+        </div> */}
 
         <div className="headerFv">
           <h1>
@@ -92,9 +92,9 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="headRightImg">
+        {/* <div className="headRightImg">
           <img src={image2} alt="茶芝犬" />
-        </div>
+        </div> */}
       </header>
     </>
   )
