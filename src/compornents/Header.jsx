@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import image1 from '../images/dog01.png'
-import image2 from '../images/dog02.png'
+// import image1 from '../images/dog01.png'
+// import image2 from '../images/dog02.png'
 import { Link as Scroll } from 'react-scroll'
 
 const Header = () => {
