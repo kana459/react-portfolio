@@ -12,7 +12,7 @@ const HomePage = () => {
     axios
       .get('https://mugireact.microcms.io/api/v1/blogs', {
         headers: {
-          // 'X-API-KEY': process.env.REACT_APP_POSIPAN_API_KEY,
+          'X-API-KEY': process.env.REACT_APP_POSIPAN_API_KEY,
         },
       })
       .then((response) => {
