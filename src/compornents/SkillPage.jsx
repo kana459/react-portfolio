@@ -8,7 +8,7 @@ const SkillPage = () => {
         <div className="skillData">
           <dt>開発</dt>
           <dd className='re-font'>HTML5 / SCSS / JavaScript / jQuery /
-          PHP / Gulp / FTP</dd>
+          PHP / React / Gulp / FTP</dd>
         </div>
 
         <div className="skillData">
