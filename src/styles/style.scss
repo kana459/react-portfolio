@@ -268,8 +268,10 @@ header {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 50%;
+    height: 50vh;
+    width: 100vw;
     display: block;
+    background: url(../images/headerImg.jpg) no-repeat center/cover;
 
     @include sp {
       height: auto;
