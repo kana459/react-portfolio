@@ -340,10 +340,23 @@ header .headerImgsp img {
   text-orientation: upright;
   font-size: 3.5rem;
   letter-spacing: 0.6rem;
-}
-.App nav ul li:hover {
-  opacity: 0.5;
+  position: relative;
   cursor: pointer;
+}
+.App nav ul li::before {
+  content: "";
+  background: url(../images/icon.svg) no-repeat center/cover;
+  width: 6rem;
+  height: 5rem;
+  display: block;
+  position: absolute;
+  top: -25%;
+  left: 1%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.App nav ul li:hover::before {
+  opacity: 1;
 }
 .App nav ul li a {
   line-height: 100%;
@@ -384,6 +397,21 @@ main #worksSec .worksList article .thumbnail {
   height: 21.875vw;
   margin-bottom: 20%;
   transition: opacity 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+main #worksSec .worksList article .thumbnail::before {
+  content: "";
+  background: url(../images/icon.svg) no-repeat center/cover;
+  width: 11rem;
+  height: 9rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: opacity 0.3s;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 main #worksSec .worksList article .thumbnail > p {
   display: none;
@@ -402,6 +430,9 @@ main #worksSec .worksList article .thumbnail img {
 }
 main #worksSec .worksList article .thumbnail:hover {
   opacity: 0.6;
+}
+main #worksSec .worksList article .thumbnail:hover::before {
+  opacity: 1;
 }
 main #topAbout {
   margin-top: 10rem;
