@@ -6,9 +6,6 @@ import HomePage from './compornents/HomePage'
 import Works from './compornents/works/Works'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' //BrowserRouter=routerを導入するためのコンポーネント
 import Footer from './compornents/Footer'
-import ContactForm from './compornents/contact/ContactForm'
-import ContactConfirm from './compornents/contact/ContactConfirm'
-import Memo from './compornents/memo/Memo'
 
 //Appというコンポーネントを定義
 const App = () => {
@@ -32,9 +29,6 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/confirm" element={<ContactConfirm />} />
-          <Route path="/memo" element={<Memo />} />
           <Route path="/:contentId" element={<Works />} />
         </Routes>
         <Footer />

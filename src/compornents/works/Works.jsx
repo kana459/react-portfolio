@@ -19,7 +19,7 @@ const Content = () => {
   }, [contentId])
   //contentId＝副作用の発生源
 
-  if (!content) return <div className='loading'>Loading...</div>
+  if (!content) return <div className="loading">Loading...</div>
 
   return (
     <main className="worksContent">
@@ -28,7 +28,8 @@ const Content = () => {
       </div>
 
       <div className="siteUrlFlex">
-        <div className="siteURL" dangerouslySetInnerHTML={{ __html: content.siteURL }}></div>
+        <div className="siteURL" dangerouslySetInnerHTML={{ __html: content.siteURL }}>
+        </div>
 
         <svg className="newTabSvg" viewBox="0 0 512 512">
           <g>
@@ -39,10 +40,7 @@ const Content = () => {
         </svg>
       </div>
 
-      <div
-        className="contText"
-        dangerouslySetInnerHTML={{ __html: content.contents }}
-      ></div>
+      <div className="contText" dangerouslySetInnerHTML={{ __html: content.contents }}></div>
 
       <div className="backHome">
         <Link to="/">

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div id="copyright">
-        <small className="copyrightText">&copy;むぎまるのポートフォリオ</small>
+        <small className="copyright re-font">&copy;ShipukuKana PortfoioSite</small>
       </div>
     </footer>
   )
