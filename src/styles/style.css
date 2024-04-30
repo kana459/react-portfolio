@@ -1,38 +1,36 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap");
-.zen-maru gothic-regular {
-  font-family: "Zen Maru Gothic", serif;
-  font-weight: 400;
+.mincho gothic-demibold {
+  font-family: "Hiragino Mincho ProN", serif;
+  font-weight: 600;
   font-style: normal;
 }
 
-.zen-maru gothic-medium {
-  font-family: "Zen Maru Gothic", serif;
-  font-weight: 500;
+.zen-maru gothic-regular {
+  font-family: "Hiragino Mincho ProN", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 a:link {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
 }
 
 a:active {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: solid;
 }
 
 a:visited {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: solid;
 }
 
 a:hover {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: none;
 }
 
@@ -78,13 +76,13 @@ html,body
 ----------------------------------*/
 html {
   font-size: 62.5%;
-  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-family: "Hiragino Mincho ProN", "明朝体", "YuMincho", "Yu Mincho", serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background: #fffdfa;
-  color: #191a1a;
+  background: #ffffff;
+  color: #080808;
   box-sizing: border-box;
 }
 
@@ -95,9 +93,9 @@ body {
   letter-spacing: normal;
   font-feature-settings: "palt";
   position: relative;
-  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-  background: #fffdfa;
-  color: #191a1a;
+  font-family: "Hiragino Mincho ProN", "明朝体", "YuMincho", "Yu Mincho", serif;
+  background: #ffffff;
+  color: #080808;
   overflow-x: hidden;
 }
 
@@ -109,19 +107,36 @@ li {
 フォント設定
 ----------------------------------*/
 h2 {
-  font-size: 2.6rem;
+  font-size: 4rem;
   text-align: center;
-  margin: 0 auto 5%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 1.3rem;
+  padding: 20px;
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
+  margin: 0;
+  line-height: 100%;
+  margin-left: auto;
 }
 @media screen and (max-width: 860px) {
   h2 {
-    margin: 0 auto 10%;
+    font-size: 2.3rem;
+    padding: 10px;
   }
 }
 
 h3 {
-  font-size: 1.8rem;
-  text-align: left;
+  font-size: 2.2rem;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴシックProN", serif;
+  margin: 0 0 2rem;
+  font-weight: 300;
+  line-height: 100%;
+}
+@media screen and (max-width: 860px) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 h4 {
@@ -130,7 +145,12 @@ h4 {
 }
 
 .re-font {
-  font-size: 1.6rem;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴシックProN", serif;
+}
+@media screen and (max-width: 860px) {
+  .re-font {
+    font-size: 1.5rem;
+  }
 }
 
 .resm-font {
@@ -203,83 +223,81 @@ button {
 }
 
 header {
-  width: 80%;
+  width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1280px;
 }
 @media screen and (max-width: 860px) {
   header {
     width: 100%;
+    height: 85vh;
+  }
+}
+header .headerFv {
+  z-index: 1;
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  top: 80px;
+  gap: 33%;
+}
+@media screen and (max-width: 860px) {
+  header .headerFv {
+    display: block;
   }
 }
 header .headerFv h1 {
-  display: flex;
-  justify-content: center;
-  margin: 5% 5% 10%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin: 0 1%;
+  line-height: 100%;
+  letter-spacing: 4.3rem;
+  font-size: 8rem;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-header .headerFv .titleSvg {
-  width: 18vw;
-  min-width: 180px;
+@media screen and (max-width: 860px) {
+  header .headerFv h1 {
+    margin: auto;
+    font-size: 5.5rem;
+    letter-spacing: 2.5rem;
+  }
 }
-header .headerFv .objSvg {
-  display: none;
-}
-header .headerFv .wrapFv {
+header .headerImg {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  height: 50%;
+  display: block;
+}
+@media screen and (max-width: 860px) {
+  header .headerImg {
+    height: auto;
+    display: none;
+  }
+}
+header .headerImg img {
+  display: block;
+}
+header .headerImgsp {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
   display: none;
 }
 @media screen and (max-width: 860px) {
-  header .headerFv .wrapFv {
+  header .headerImgsp {
+    height: auto;
     display: block;
   }
-  header .headerFv .wrapFv .pad01,
-  header .headerFv .wrapFv .pad02 {
-    width: 16%;
-    height: 9%;
-    position: absolute;
-  }
-  header .headerFv .wrapFv .pad01 {
-    top: 16%;
-    left: 22%;
-    transform: rotate(-20deg);
-  }
-  header .headerFv .wrapFv .pad02 {
-    top: 74%;
-    left: 64%;
-    transform: rotate(-12deg);
-  }
 }
-header .headLeftImg {
-  width: 17vw;
-  max-width: 230px;
-}
-@media screen and (max-width: 860px) {
-  header .headLeftImg {
-    display: none;
-  }
-}
-header .headRightImg {
-  width: 16vw;
-  max-width: 210px;
-}
-@media screen and (max-width: 860px) {
-  header .headRightImg {
-    display: none;
-  }
+header .headerImgsp img {
+  display: block;
 }
 
 .App {
-  max-width: 1280px;
-  margin: 0 auto;
   display: block;
   width: 100%;
   height: 100vh;
@@ -289,16 +307,22 @@ header .headRightImg {
   display: block;
 }
 .App nav {
-  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (max-width: 860px) {
+  .App nav {
+    display: none;
+  }
 }
 .App nav ul {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0;
   margin: 0;
-  width: 70%;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 4rem;
 }
 @media screen and (max-width: 860px) {
   .App nav ul {
@@ -308,365 +332,186 @@ header .headRightImg {
 .App nav ul li {
   transition: all 0.3s;
   padding: 10px 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3.5rem;
+  letter-spacing: 0.6rem;
 }
 .App nav ul li:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 .App nav ul li a {
-  padding: 0 20px;
+  line-height: 100%;
+  padding: 0 10px;
   display: block;
-  border-right: 2px solid #191a1a;
-}
-.App nav ul li:last-of-type a, .App nav ul li:nth-of-type(3) a {
-  border-right: none;
 }
 
 main {
-  margin: 1% 15% 0;
+  margin: 10rem 10rem 10rem 16rem;
   position: relative;
   max-width: 1280px;
+}
+@media screen and (max-width: 860px) {
+  main {
+    margin: 4rem 3rem 4rem 4rem;
+  }
 }
 main #worksSec .worksList {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10%;
-  justify-items: center;
   margin-bottom: 0;
+  margin-right: 10%;
+  justify-items: center;
+  max-width: 1100px;
 }
 @media screen and (max-width: 860px) {
   main #worksSec .worksList {
     display: block;
+    margin: 3rem 4.5rem 0 2rem;
   }
 }
 main #worksSec .worksList article {
-  margin-bottom: 22.2%;
-  width: 100%;
-}
-@media screen and (max-width: 860px) {
-  main #worksSec .worksList article:last-of-type {
-    margin-bottom: 35%;
-  }
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main #worksSec .worksList article .thumbnail {
-  border: 1px solid #222222;
-  border-radius: 2rem;
-  overflow: hidden;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 23vw;
+  width: 28.125vw;
+  height: 21.875vw;
+  margin-bottom: 20%;
+  transition: opacity 0.3s ease;
 }
-main #worksSec .worksList article .thumbnail img {
-  border-radius: 2rem;
+main #worksSec .worksList article .thumbnail > p {
+  display: none;
+}
+main #worksSec .worksList article .thumbnail figure {
+  margin: 0;
 }
 @media screen and (max-width: 860px) {
   main #worksSec .worksList article .thumbnail {
-    height: 46vw;
+    width: 100%;
+    height: auto;
   }
 }
 main #worksSec .worksList article .thumbnail img {
   height: 100%;
 }
+main #worksSec .worksList article .thumbnail:hover {
+  opacity: 0.6;
+}
 main #topAbout {
-  margin-bottom: 13%;
+  margin-top: 10rem;
+  position: relative;
 }
 @media screen and (max-width: 860px) {
   main #topAbout {
-    margin-bottom: 35%;
+    margin-top: 4rem;
   }
 }
-main #topAbout .topAbout-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
+main #topAbout .cont {
+  position: relative;
 }
 @media screen and (max-width: 860px) {
-  main #topAbout .topAbout-list {
-    display: block;
-    padding: 0;
+  main #topAbout .cont {
+    margin: 3rem 4.5rem 0 2rem;
   }
 }
-main #topAbout .aboutImg {
-  border: 1px solid #222222;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 5.5%;
-  width: 10vw;
-  height: 10vw;
+main #topAbout .cont .topAbout-list {
+  width: 57%;
   padding: 0;
+  margin: 0 13.2%;
+  z-index: 1;
+  position: relative;
 }
 @media screen and (max-width: 860px) {
-  main #topAbout .aboutImg {
-    width: 48vw;
-    height: 48vw;
-    margin: 0 auto 9%;
+  main #topAbout .cont .topAbout-list {
+    width: 100%;
+    margin: 0;
   }
 }
-main #topAbout .abouttext {
-  width: 80%;
+main #topAbout .cont .topAbout-list li {
+  padding: 20px;
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 300;
 }
-main #skill {
-  margin-bottom: 15%;
+main #topAbout .cont .topAbout-list li p {
+  margin: 0;
+  letter-spacing: 0.25rem;
+  line-height: 3rem;
 }
-@media screen and (max-width: 860px) {
-  main #skill {
-    margin-bottom: 32%;
-  }
-}
-main #skill .skillList {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-main #skill .skillList .skillData {
+main #topAbout .cont .topAbout-list li .skillList {
   display: flex;
-  align-items: center;
-  margin-bottom: 4.5%;
 }
-@media screen and (max-width: 860px) {
-  main #skill .skillList .skillData {
-    display: block;
-    margin-bottom: 13.5%;
-  }
-}
-main #skill .skillList .skillData dt {
+main #topAbout .cont .topAbout-list li .skillList > span {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴシックProN", serif;
+  display: inline-block;
+  white-space: nowrap;
   min-width: 80px;
-  font-size: 1.8rem;
 }
 @media screen and (max-width: 860px) {
-  main #skill .skillList .skillData dt {
-    margin-bottom: 3%;
+  main #topAbout .cont .topAbout-list li .skillList > span {
+    font-size: 1.8rem;
+    min-width: 70px;
   }
 }
-main #skill .skillList .skillData dd {
-  margin-inline-start: 0;
+main #topAbout .cont .topAbout-list li .skillList.dev {
+  margin-bottom: 2rem;
 }
-main .sns {
-  display: flex;
-  gap: 4%;
-  justify-content: center;
+main #topAbout .cont .topAbout-list .jobHis {
+  margin-bottom: 7rem;
 }
-main .sns .insta,
-main .sns .line {
-  padding: 10px;
-  display: block;
-  opacity: 0.5;
-}
-main .sns .insta svg,
-main .sns .line svg {
-  width: 5vw;
-  max-width: 54px;
+main #topAbout .cont .backImg01 {
+  width: 19.53125vw;
+  height: 15.625vw;
+  position: absolute;
+  top: 3%;
+  right: 7%;
+  opacity: 0.4;
 }
 @media screen and (max-width: 860px) {
-  main .sns .insta svg,
-  main .sns .line svg {
-    width: 10vw;
+  main #topAbout .cont .backImg01 {
+    width: 43.0555555556vw;
+    height: 9.765625vw;
+    top: 10%;
+    right: -25%;
   }
 }
-main .deco {
-  display: flex;
-  justify-content: center;
-  margin: 3.9% 0 9.8%;
+main #topAbout .cont .backImg02 {
+  width: 17.1875vw;
+  height: 14.0625vw;
+  opacity: 0.4;
+  bottom: 3%;
+  position: absolute;
+  left: -7%;
 }
 @media screen and (max-width: 860px) {
-  main .deco {
-    margin: 7% 0 15%;
-  }
-}
-main .deco svg {
-  width: 8vw;
-  max-width: 110px;
-}
-@media screen and (max-width: 860px) {
-  main .deco svg {
-    width: 16vw;
+  main #topAbout .cont .backImg02 {
+    width: 33.3333333333vw;
+    height: 27.7777777778vw;
+    bottom: 31%;
+    left: -20%;
   }
 }
 
-footer {
-  background-color: transparent;
-}
 footer #copyright {
   padding-bottom: 1.5%;
+  text-align: center;
 }
 @media screen and (max-width: 860px) {
   footer #copyright {
     padding-bottom: 5%;
   }
 }
-footer #copyright .copyrightText {
-  display: block;
-  text-align: center;
+footer #copyright .copyright {
   font-size: 1.2rem;
   font-weight: bold;
 }
-
-.contactform .formNote {
-  text-align: center;
-  margin-bottom: 10%;
-}
 @media screen and (max-width: 860px) {
-  .contactform .formNote {
-    margin-bottom: 15%;
-  }
-}
-.contactform form {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-}
-@media screen and (max-width: 860px) {
-  .contactform form {
-    width: 100%;
-  }
-}
-.contactform form .inputForm {
-  margin: 0 0 7%;
-}
-@media screen and (max-width: 860px) {
-  .contactform form .inputForm {
-    margin: 0 0 13%;
-  }
-}
-.contactform form .inputForm:last-of-type {
-  margin-bottom: 5%;
-}
-@media screen and (max-width: 860px) {
-  .contactform form .inputForm:last-of-type {
-    margin-bottom: 20%;
-  }
-}
-.contactform form .inputForm p {
-  margin-bottom: 2%;
-}
-.contactform form .inputForm input {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 50px;
-  border: 1px solid;
-  /* margin-bottom: 8%; */
-  border-radius: 25px;
-  padding: 0 20px;
-  max-width: 800px;
-}
-.contactform form .inputForm .formNoteText {
-  margin: 10px 0 0;
-  text-align: justify;
-  color: red;
-}
-.contactform form .inputForm label {
-  margin-bottom: 6%;
-}
-.contactform form .inputForm label textarea {
-  width: 100%;
-  border: 1px solid;
-  border-radius: 25px;
-  padding: 15px 20px;
-  max-width: 800px;
-}
-
-.contactfirm {
-  text-align: center;
-}
-.contactfirm .confirm-text {
-  margin-bottom: 4%;
-}
-.contactfirm .confirm-text:first-of-type {
-  margin-top: 8%;
-}
-.contactfirm .confirm-text p {
-  margin: 0;
-}
-.contactfirm .confirm-text .confirmName {
-  margin-bottom: 1%;
-}
-.contactfirm .confirmbtn {
-  display: flex;
-  gap: 5%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
-}
-.contactfirm .confirmbtn .finSubmit {
-  opacity: 0.5;
-}
-
-.memo {
-  margin-bottom: 16%;
-}
-.memo .formClass {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 9%;
-}
-@media screen and (max-width: 860px) {
-  .memo .formClass {
-    margin-bottom: 15%;
-  }
-}
-.memo .formClass form {
-  display: flex;
-  justify-content: center;
-  gap: 3%;
-}
-@media screen and (max-width: 860px) {
-  .memo .formClass form {
-    display: block;
-    text-align: center;
-  }
-}
-.memo .formClass form input {
-  border: 2px solid;
-  height: 50px;
-  width: 50vw;
-  border-radius: 25px;
-  padding: 0 20px;
-}
-@media screen and (max-width: 860px) {
-  .memo .formClass form input {
-    width: 100%;
-    margin-bottom: 9%;
-  }
-}
-@media screen and (max-width: 860px) {
-  .memo .memoOrder {
-    padding: 0;
-  }
-}
-.memo .memoOrder:last-of-type {
-  margin-bottom: 16%;
-}
-@media screen and (max-width: 860px) {
-  .memo .memoOrder:last-of-type {
-    margin-bottom: 35%;
-  }
-}
-.memo .memoOrder .memolist {
-  display: flex;
-  justify-content: center;
-  gap: 3%;
-  align-items: center;
-  margin-bottom: 3%;
-}
-.memo .memoOrder .memolist span {
-  display: block;
-  min-width: 250px;
-  height: 45px;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-width: 860px) {
-  .memo .memoOrder .memolist span {
-    min-width: 200px;
+  footer #copyright .copyright {
+    font-size: 0.9rem;
   }
 }
 

@@ -1,41 +1,37 @@
 @use './utils.scss' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
-
-.zen-maru gothic-regular {
-  font-family: 'Zen Maru Gothic', serif;
-  font-weight: 400;
+.mincho gothic-demibold {
+  font-family: 'Hiragino Mincho ProN', serif;
+  font-weight: 600;
   font-style: normal;
 }
 
-.zen-maru gothic-medium {
-  font-family: 'Zen Maru Gothic', serif;
-  font-weight: 500;
+.zen-maru gothic-regular {
+  font-family: 'Hiragino Mincho ProN', serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 a:link {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
 }
 
 a:active {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: solid;
 }
 
 a:visited {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: solid;
 }
 
 a:hover {
   text-decoration: none;
-  color: #222222;
+  color: #080808;
   outline: none;
 }
 
@@ -80,14 +76,13 @@ html,body
 ----------------------------------*/
 html {
   font-size: 62.5%;
-  font-family: 'Zen Maru Gothic', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ',
-    sans-serif;
+  font-family: 'Hiragino Mincho ProN', '明朝体', 'YuMincho', 'Yu Mincho', serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background: #fffdfa;
-  color: #191a1a;
+  background: #ffffff;
+  color: #080808;
   box-sizing: border-box;
 }
 
@@ -98,10 +93,9 @@ body {
   letter-spacing: normal;
   font-feature-settings: 'palt';
   position: relative;
-  font-family: 'Zen Maru Gothic', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ',
-    sans-serif;
-  background: #fffdfa;
-  color: #191a1a;
+  font-family: 'Hiragino Mincho ProN', '明朝体', 'YuMincho', 'Yu Mincho', serif;
+  background: #ffffff;
+  color: #080808;
   overflow-x: hidden;
 }
 
@@ -113,18 +107,34 @@ li {
 フォント設定
 ----------------------------------*/
 h2 {
-  font-size: 2.6rem;
+  font-size: 4rem;
   text-align: center;
-  margin: 0 auto 5%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 1.3rem;
+  padding: 20px;
+  border-left: 1px solid #080808;
+  border-right: 1px solid #080808;
+  margin: 0;
+  line-height: 100%;
+  margin-left: auto;
 
   @include sp {
-    margin: 0 auto 10%;
+    font-size: 2.3rem;
+    padding: 10px;
   }
 }
 
 h3 {
-  font-size: 1.8rem;
-  text-align: left;
+  font-size: 2.2rem;
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴシックProN', serif;
+  margin: 0 0 2rem;
+  font-weight: 300;
+  line-height: 100%;
+
+  @include sp {
+    font-size: 2rem;
+  }
 }
 
 h4 {
@@ -133,7 +143,11 @@ h4 {
 }
 
 .re-font {
-  font-size: 1.6rem;
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴシックProN', serif;
+
+  @include sp {
+    font-size: 1.5rem;
+  }
 }
 
 .resm-font {
@@ -211,90 +225,80 @@ button {
 }
 
 header {
-  width: 80%;
+  width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1280px;
 
   @include sp {
     width: 100%;
+    height: 85vh;
   }
 
   .headerFv {
+    z-index: 1;
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    top: 80px;
+    gap: 33%;
+
+    @include sp {
+      display: block;
+    }
+
     h1 {
-      display: flex;
-      justify-content: center;
-      margin: 5% 5% 10%;
-    }
-
-    .titleSvg {
-      width: calc(180 / 1000 * 100vw);
-      min-width: 180px;
-    }
-
-    .objSvg {
-      display: none;
-    }
-
-    .wrapFv {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: none;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      margin: 0 1%;
+      line-height: 100%;
+      letter-spacing: 4.3rem;
+      font-size: 8rem;
+      height: fit-content;
 
       @include sp {
-        display: block;
-
-        .pad01,
-        .pad02 {
-          width: 16%;
-          height: 9%;
-          position: absolute;
-        }
-
-        .pad01 {
-          top: 16%;
-          left: 22%;
-          transform: rotate(-20deg);
-        }
-
-        .pad02 {
-          top: 74%;
-          left: 64%;
-          transform: rotate(-12deg);
-        }
+        margin: auto;
+        font-size: 5.5rem;
+        letter-spacing: 2.5rem;
       }
     }
   }
 
-  // .headLeftImg {
-  //   width: 17vw;
-  //   max-width: 230px;
+  .headerImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    display: block;
 
-  //   @include sp {
-  //     display: none;
-  //   }
-  // }
+    @include sp {
+      height: auto;
+      display: none;
+    }
 
-  // .headRightImg {
-  //   width: 16vw;
-  //   max-width: 210px;
+    img {
+      display: block;
+    }
+  }
+  .headerImgsp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    display: none;
 
-  //   @include sp {
-  //     display: none;
-  //   }
-  // }
+    @include sp {
+      height: auto;
+      display: block;
+    }
+
+    img {
+      display: block;
+    }
+  }
 }
 
 .App {
-  max-width: 1280px;
-  margin: 0 auto;
   display: block;
   width: 100%;
   height: 100vh;
@@ -305,16 +309,20 @@ header {
   }
 
   nav {
-    text-align: center;
+    height: fit-content;
+
+    @include sp {
+      display: none;
+    }
 
     ul {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       padding: 0;
       margin: 0;
-      width: 70%;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 4rem;
 
       @include sp {
         width: 100%;
@@ -323,6 +331,10 @@ header {
       li {
         transition: all 0.3s;
         padding: 10px 0;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 3.5rem;
+        letter-spacing: 0.6rem;
 
         &:hover {
           opacity: 0.5;
@@ -330,16 +342,9 @@ header {
         }
 
         a {
-          padding: 0 20px;
+          line-height: 100%;
+          padding: 0 10px;
           display: block;
-          border-right: 2px solid #191a1a;
-        }
-
-        &:last-of-type,
-        &:nth-of-type(3) {
-          a {
-            border-right: none;
-          }
         }
       }
     }
@@ -347,52 +352,56 @@ header {
 }
 
 main {
-  margin: 1% 15% 0;
+  margin: 10rem 10rem 10rem 16rem;
   position: relative;
   max-width: 1280px;
+
+  @include sp {
+    margin: 4rem 3rem 4rem 4rem;
+  }
 
   #worksSec {
     .worksList {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-column-gap: 10%;
-      justify-items: center;
       margin-bottom: 0;
+      margin-right: 10%;
+      justify-items: center;
+      max-width: 1100px;
 
       @include sp {
         display: block;
+        margin: 3rem 4.5rem 0 2rem;
       }
 
       article {
-        margin-bottom: 22.2%;
-        width: 100%;
-
-        @include sp {
-          &:last-of-type {
-            margin-bottom: 35%;
-          }
-        }
+        width: fit-content;
 
         .thumbnail {
-          border: 1px solid #222222;
-          border-radius: 2rem;
-          overflow: hidden;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: 100%;
-          height: calc(230 / 1000 * 100vw);
+          width: calc(360 / 1280 * 100vw);
+          height: calc(280 / 1280 * 100vw);
+          margin-bottom: 20%;
+          transition: opacity 0.3s ease;
 
-          img {
-            border-radius: 2rem;
+          > p {
+            display: none;
+          }
+
+          figure {
+            margin: 0;
           }
 
           @include sp {
-            height: calc(230 / 500 * 100vw);
+            width: 100%;
+            height: auto;
           }
 
           img {
             height: 100%;
+          }
+
+          &:hover {
+            opacity: 0.6;
           }
         }
       }
@@ -400,314 +409,121 @@ main {
   }
 
   #topAbout {
-    margin-bottom: 13%;
+    margin-top: 10rem;
+    position: relative;
 
     @include sp {
-      margin-bottom: 35%;
+      margin-top: 4rem;
     }
 
-    .topAbout-list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 0 auto;
+    .cont {
+      position: relative;
 
       @include sp {
-        display: block;
+        margin: 3rem 4.5rem 0 2rem;
+      }
+
+      .topAbout-list {
+        width: 57%;
         padding: 0;
-      }
-    }
-
-    .aboutImg {
-      border: 1px solid #222222;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 5.5%;
-      width: 10vw;
-      height: 10vw;
-      padding: 0;
-
-      @include sp {
-        width: 48vw;
-        height: 48vw;
-        margin: 0 auto 9%;
-      }
-    }
-
-    .abouttext {
-      width: 80%;
-      width: fit-content;
-    }
-  }
-
-  #skill {
-    margin-bottom: 15%;
-
-    @include sp {
-      margin-bottom: 32%;
-    }
-
-    .skillList {
-      width: fit-content;
-      margin: 0 auto;
-
-      .skillData {
-        display: flex;
-        align-items: center;
-        margin-bottom: 4.5%;
+        margin: 0 13.2%;
+        z-index: 1;
+        position: relative;
 
         @include sp {
-          display: block;
-          margin-bottom: 13.5%;
+          width: 100%;
+          margin: 0;
         }
 
-        dt {
-          min-width: 80px;
-          font-size: 1.8rem;
+        li {
+          padding: 20px;
+          border-left: 1px solid #080808;
+          border-right: 1px solid #080808;
+          width: fit-content;
+          font-weight: 300;
 
-          @include sp {
-            margin-bottom: 3%;
+          p {
+            margin: 0;
+            letter-spacing: 0.25rem;
+            line-height: 3rem;
+          }
+
+          .skillList {
+            display: flex;
+
+            > span {
+              font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴシックProN', serif;
+              display: inline-block;
+              white-space: nowrap;
+              min-width: 80px;
+
+              @include sp {
+                font-size: 1.8rem;
+                min-width: 70px;
+              }
+            }
+
+            &.dev {
+              margin-bottom: 2rem;
+            }
           }
         }
 
-        dd {
-          margin-inline-start: 0;
+        .jobHis {
+          margin-bottom: 7rem;
         }
       }
-    }
-  }
 
-  .sns {
-    display: flex;
-    gap: 4%;
-    justify-content: center;
-
-    .insta,
-    .line {
-      padding: 10px;
-      display: block;
-      opacity: 0.5;
-
-      svg {
-        width: calc(50 / 1000 * 100vw);
-        max-width: 54px;
+      .backImg01 {
+        width: calc(250 / 1280 * 100vw);
+        height: calc(200 / 1280 * 100vw);
+        position: absolute;
+        top: 3%;
+        right: 7%;
+        opacity: 0.4;
 
         @include sp {
-          width: calc(50 / 500 * 100vw);
+          width: calc(155 / 360 * 100vw);
+          height: calc(125 / 1280 * 100vw);
+          top: 10%;
+          right: -25%;
         }
       }
-    }
-  }
 
-  .deco {
-    display: flex;
-    justify-content: center;
-    margin: 3.9% 0 9.8%;
+      .backImg02 {
+        width: calc(220 / 1280 * 100vw);
+        height: calc(180 / 1280 * 100vw);
+        opacity: 0.4;
+        bottom: 3%;
+        position: absolute;
+        left: -7%;
 
-    @include sp {
-      margin: 7% 0 15%;
-    }
-
-    svg {
-      width: calc(80 / 1000 * 100vw);
-      max-width: 110px;
-
-      @include sp {
-        width: calc(80 / 500 * 100vw);
+        @include sp {
+          width: calc(120 / 360 * 100vw);
+          height: calc(100 / 360 * 100vw);
+          bottom: 31%;
+          left: -20%;
+        }
       }
     }
   }
 }
 
 footer {
-  background-color: transparent;
-
   #copyright {
     padding-bottom: 1.5%;
+    text-align: center;
 
     @include sp {
       padding-bottom: 5%;
     }
 
-    .copyrightText {
-      display: block;
-      text-align: center;
+    .copyright {
       font-size: 1.2rem;
       font-weight: bold;
-    }
-  }
-}
-
-.contactform {
-  .formNote {
-    text-align: center;
-    margin-bottom: 10%;
-
-    @include sp {
-      margin-bottom: 15%;
-    }
-  }
-
-  form {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-
-    @include sp {
-      width: 100%;
-    }
-
-    .inputForm {
-      margin: 0 0 7%;
 
       @include sp {
-        margin: 0 0 13%;
-      }
-
-      &:last-of-type {
-        margin-bottom: 5%;
-
-        @include sp {
-          margin-bottom: 20%;
-        }
-      }
-
-      p {
-        margin-bottom: 2%;
-      }
-
-      input {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        height: 50px;
-        border: 1px solid;
-        /* margin-bottom: 8%; */
-        border-radius: 25px;
-        padding: 0 20px;
-        max-width: 800px;
-      }
-
-      .formNoteText {
-        margin: 10px 0 0;
-        text-align: justify;
-        color: red;
-      }
-
-      label {
-        margin-bottom: 6%;
-
-        textarea {
-          width: 100%;
-          border: 1px solid;
-          border-radius: 25px;
-          padding: 15px 20px;
-          max-width: 800px;
-        }
-      }
-    }
-  }
-}
-
-.contactfirm {
-  text-align: center;
-
-  .confirm-text {
-    margin-bottom: 4%;
-
-    &:first-of-type {
-      margin-top: 8%;
-    }
-
-    p {
-      margin: 0;
-    }
-    .confirmName {
-      margin-bottom: 1%;
-    }
-  }
-
-  .confirmbtn {
-    display: flex;
-    gap: 5%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-
-    .finSubmit {
-      opacity: 0.5;
-    }
-  }
-}
-
-.memo {
-  margin-bottom: 16%;
-
-  .formClass {
-    width: fit-content;
-    margin: 0 auto 9%;
-
-    @include sp {
-      margin-bottom: 15%;
-    }
-
-    form {
-      display: flex;
-      justify-content: center;
-      gap: 3%;
-
-      @include sp {
-        display: block;
-        text-align: center;
-      }
-
-      input {
-        border: 2px solid;
-        height: 50px;
-        width: 50vw;
-        border-radius: 25px;
-        padding: 0 20px;
-
-        @include sp {
-          width: 100%;
-          margin-bottom: 9%;
-        }
-      }
-    }
-  }
-
-  .memoOrder {
-    @include sp {
-      padding: 0;
-    }
-    &:last-of-type {
-      margin-bottom: 16%;
-
-      @include sp {
-        margin-bottom: 35%;
-      }
-    }
-
-    .memolist {
-      display: flex;
-      justify-content: center;
-      gap: 3%;
-      align-items: center;
-      margin-bottom: 3%;
-
-      span {
-        display: block;
-        min-width: 250px;
-        height: 45px;
-        border: 1px solid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include sp {
-          min-width: 200px;
-        }
+        font-size: 0.9rem;
       }
     }
   }
