@@ -268,8 +268,10 @@ header .headerImg {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50%;
+  height: 50vh;
+  width: 100vw;
   display: block;
+  background: url(../images/headerImg.jpg) no-repeat center/cover;
 }
 @media screen and (max-width: 860px) {
   header .headerImg {

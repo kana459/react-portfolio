@@ -28,9 +28,7 @@ const Header = () => {
             <Link to="/">雲行流水</Link>
           </h1>
         </div>
-        <div className="headerImg">
-          <img src={headerImg} alt="新福佳奈のポートフォリオサイト" />
-        </div>
+        <div className="headerImg"> </div>
         <div className="headerImgsp"></div>
       </header>
     </>
