@@ -31,9 +31,7 @@ const Header = () => {
         <div className="headerImg">
           <img src={headerImg} alt="新福佳奈のポートフォリオサイト" />
         </div>
-        <div className="headerImgsp">
-          <img src={headerImgsp} alt="新福佳奈のポートフォリオサイト" />
-        </div>
+        <div className="headerImgsp"></div>
       </header>
     </>
   )

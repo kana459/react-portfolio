@@ -286,9 +286,11 @@ header {
     left: 0;
     height: 50%;
     display: none;
+    background: url(../images/headerImgsp.jpg) no-repeat center/cover;
 
     @include sp {
-      height: auto;
+      height: 50vh;
+      width: 100vw;
       display: block;
     }
 
@@ -486,7 +488,8 @@ main {
           width: calc(155 / 360 * 100vw);
           height: calc(125 / 1280 * 100vw);
           top: 10%;
-          right: -25%;
+          left: 58%;
+          max-width: 360px;
         }
       }
 
@@ -502,7 +505,10 @@ main {
           width: calc(120 / 360 * 100vw);
           height: calc(100 / 360 * 100vw);
           bottom: 31%;
-          left: -20%;
+          bottom: 8%;
+          max-width: 200px;
+          right: 65%;
+          left: -4%;
         }
       }
     }
