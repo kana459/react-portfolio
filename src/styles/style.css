@@ -286,10 +286,12 @@ header .headerImgsp {
   left: 0;
   height: 50%;
   display: none;
+  background: url(../images/headerImgsp.jpg) no-repeat center/cover;
 }
 @media screen and (max-width: 860px) {
   header .headerImgsp {
-    height: auto;
+    height: 50vh;
+    width: 100vw;
     display: block;
   }
 }
@@ -476,7 +478,8 @@ main #topAbout .cont .backImg01 {
     width: 43.0555555556vw;
     height: 9.765625vw;
     top: 10%;
-    right: -25%;
+    left: 58%;
+    max-width: 360px;
   }
 }
 main #topAbout .cont .backImg02 {
@@ -492,7 +495,10 @@ main #topAbout .cont .backImg02 {
     width: 33.3333333333vw;
     height: 27.7777777778vw;
     bottom: 31%;
-    left: -20%;
+    bottom: 8%;
+    max-width: 200px;
+    right: 65%;
+    left: -4%;
   }
 }
 
